@@ -1,0 +1,96 @@
+/* Border box declaration */
+html {
+    box-sizing: border-box;
+    background-color: #CFDAF7;
+}
+/* inherit border-box on all elements in the universe and before and after */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none;
+    background-color: #fff;
+    border-radius: 1%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mukta Vaani', sans-serif;
+    color: #464646;
+}
+
+p {
+    font-family: 'Muli', sans-serif;
+    font-size: 0.9em;
+}
+
+header {
+    background: url(../img/meditation-banner.jpg)  no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+    margin-top: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    float: left;
+    padding-left: 2.5em;
+}
+
+nav a {
+    font-family: 'Mukta Vaani', sans-serif;
+    color: #464646;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.fa {
+   padding: 0 1.5em;
+   color: #464646;
+}
+
+nav .fa {
+    padding-right: 0.5em;
+    font-size: 0.6em;
+    color: #464646;
+}
+
+#homeBanner {
+    text-align: center;
+    border: 0.5px dotted #464646;
+    margin: 4em auto;
+    padding: 2em;
+    border-radius: 2%;
+    width: 60%;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#homeBanner h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+/*------------ Grid system --------------------*/
+.row::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+
+
+
