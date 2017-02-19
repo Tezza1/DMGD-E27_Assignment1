@@ -1,10 +1,10 @@
 /* GRID LAYOUT OUTLINEE
-   |-----------100%-----------| col-1 (100%)
-   |-----50%----||-----50%----| col-2 (50%)
+   |-----------100%-----------| col-1 (100%) - 92%
+   |-----50%----||-----50%----| col-2 (50%) - 44%
    |--------75%--------||-25%-| col-3 (75%)
-   |-------66%-------||--33%--| col-3-1 (66%)
+   |-------66%-------||--33%--| col-3-1 (66%) - 68%
    |--33%--||-------66%-------| col 3-3 (33%)
-   |-25%-||-25%-||-25%-||-25%-| col-4 (25%)
+   |-25%-||-25%-||-25%-||-25%-| col-4 (25%) - 20%
     */
 
 /* Border box declaration */
@@ -38,24 +38,24 @@ html {
 }
 
 .col-1 {
-    width: 20.83333%;
-}
-
-.col-1-3 {
-    width: 30%;
+    width: 92%;
+    margin-right: 3.33333%;
 }
 
 .col-2 {
-    width: 44.99999%;
+    width: 46.5%;
 }
 
-.col-3 {
-    width: 69.16666%;
+.col-3-1 {
+    width: 60%;
+}
+
+.col-3-3 {
+    width:30%;
 }
 
 .col-4 {
-    width: 93.33333%;
-    margin-right: 3.33333%;
+    width: 21%;
 }
 
 
@@ -86,15 +86,6 @@ p {
 
 
 /* ------------ Header & Nav ------------- */
-
-header {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/109696/meditation-banner.jpg) no-repeat;
-    background-size: cover;
-    width: 100%;
-    /*TODO: change to em*/
-    height: 150px;
-    margin-top: 0.5em;
-}
 
 nav ul {
     list-style: none;
@@ -143,22 +134,32 @@ nav .fa {
     font-weight: bold;
 }
 
-
-/*--------------- Articles -------------------*/
+/*--------------- Images -------------------*/
+[class*='img-'] {
+    box-shadow: 10px 10px 5px #888888;
+    border-radius: 2%;
+}
 
 .img-1-3 {
     width: 90%;
     height: 20em;
-    box-shadow: 10px 10px 5px #888888;
-    border-radius: 2%;
 }
 
 .img-1-4 {
     width: 90%;
     height: 12em;
-    box-shadow: 10px 10px 5px #888888;
-    border-radius: 2%;
 }
+
+.img-1-2 {
+    width: 90%;
+    height: 16em;
+}
+
+.img-1-1 {
+    width: 95%;
+}
+
+/*--------------- Articles -------------------*/
 
 .socialMedia {
     list-style: none;
@@ -168,6 +169,10 @@ nav .fa {
     text-decoration: none;
     font-weight: bold;
     color: #464646;
+}
+
+.hulk {
+    box-shadow: 0  0 0;
 }
 
 
@@ -194,3 +199,87 @@ footer h6 {
     text-align: center;
     padding-top: 1em;
 }
+
+/*------Media query for tablets --------*/
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .col-4 {
+        width: 44%;
+    }
+
+    .col-2 {
+        width: 92%;
+    }
+
+    .col-3-3 {
+        width: 92%;
+    }
+
+    .img-1-2 {
+        margin-bottom: 2em;
+    }
+
+    nav li {
+        width: 46%;
+        padding-bottom: 0.8em;
+    }
+
+    nav li:nth-child(odd) {
+        float: left;
+    }
+
+    nav list-style:nth-child(even){
+        float: right;
+    }
+
+}
+
+/*------Media query for mobiles --------*/
+
+@media (max-width: 479px) {
+    [class*="col-"] {
+        width: 92%;
+    }
+
+    .img-1-2 {
+        height: 12em;
+        margin-bottom: 2em;
+    }
+
+    .img-1-3 {
+        height: 12em;
+    }
+
+    nav li {
+        width: 92%;
+        float: none;
+        padding-bottom: 0.5em;
+    }
+}
+
+/*------Media query for background image --------*/
+
+@media (max-width: 701px) {
+    header {
+        background: url(../img/meditation-banner-small.jpg) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100px;
+        margin-top: 0.3em;
+    }
+}
+
+@media (min-width: 702px) {
+    header {
+        background: url(../img/meditation-banner.jpg) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 150px;
+        margin-top: 0.5em;
+    }
+}
+
+
+/*TODO: remove stars*/
+/*TODO: fix top banner*/
+/*TODO: change divs to articles*/
