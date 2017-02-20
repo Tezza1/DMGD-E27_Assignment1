@@ -128,14 +128,13 @@ nav .fa {
 /* ------------ Main banner ----------- */
 
 #homeBanner {
-    text-align: center;
     margin: 2em auto;
     padding: 2em;
-    width: 60%;
     float: none;
 }
 
 #homeBanner h1 {
+    text-align: center;
     font-size: 3.5em;
     font-weight: bold;
 }
@@ -310,6 +309,15 @@ footer h6 {
 
     button {
         margin-bottom: 1em;
+    }
+
+    #homeBanner h1 {
+    font-size: 2em;
+    }
+
+    #homeBanner {
+    margin: 0.5em auto;
+    padding: 0;
     }
 }
 
