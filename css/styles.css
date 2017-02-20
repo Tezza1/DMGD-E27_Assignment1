@@ -128,13 +128,14 @@ nav .fa {
 /* ------------ Main banner ----------- */
 
 #homeBanner {
+    text-align: center;
     margin: 2em auto;
     padding: 2em;
+    width: 60%;
     float: none;
 }
 
 #homeBanner h1 {
-    text-align: center;
     font-size: 3.5em;
     font-weight: bold;
 }
@@ -167,6 +168,12 @@ nav .fa {
 
 .img-1-1 {
     width: 95%;
+}
+
+/*---------------- Contents -------------------*/
+
+.col-3-3 p {
+    width: 90%;
 }
 
 /*--------------- Articles -------------------*/
@@ -263,7 +270,7 @@ footer h6 {
         float: right;
     }
 
-    .stars {
+    .stars .fa {
         display: none;
     }
 
@@ -303,7 +310,7 @@ footer h6 {
         padding-bottom: 0.5em;
     }
 
-    .stars {
+    .stars .fa {
         display: none;
     }
 
